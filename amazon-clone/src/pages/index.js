@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-
+import Banner from "../components/Banner";
 export default function Home() {
   return (
     <div>
@@ -9,9 +9,14 @@ export default function Home() {
       </Head>
 
       <Header/>
+       
+      <main className="max-w-screen-2xl mx-auto">
+        {/* Banner */}
 
-      
-      {/*Header*/}
+        <Banner/>
+
+        {/* ProductFeed */}
+      </main>
     </div>
   );
 }

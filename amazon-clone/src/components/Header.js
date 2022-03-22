@@ -42,19 +42,29 @@ import {MenuIcon ,SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
                   <span className='absolute top-0 right-0 md:right-10 h-5 w-5 bg-yellow-400 text-center rounded-full text-black font-bold'>0</span>
                   <ShoppingCartIcon className='h-10'/>
                   <p className='hidden md:inline font-extrabold md:text-sm mt-2'>Basket</p>
-               </div>
-          
-  
-  
+               </div>       
+                
+                </div>
               </div>
   
               {/* Bottom nav */}
   
-              <div>
+              <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+                  <p className="link flex items-center">
+                      <MenuIcon className="text-white h-6 mr-1"/>
+                      All
+                  </p>
+                  <p className="link">Prime Video</p>
+                  <p className="link">Amazon Busness</p>
+                  <p className="link">Today's Deal</p>
+                  <p className="hidden lg:inline-flex">Eletronics</p>
+                  <p className="link hidden lg:inline-flex">Food & Grocery</p>
+                  <p className="link hidden lg:inline-flex">Prime</p>
+                  <p className="link hidden lg:inline-flex">Buy Again</p>
+                  <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
+                  <p className="link hidden lg:inline-flex">Health & Personal Care</p>
   
-              </div>
-  
-            </div>
+              </div>           
             
        
        
