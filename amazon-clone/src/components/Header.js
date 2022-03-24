@@ -57,7 +57,7 @@ import {MenuIcon ,SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
                   <p className="link">Prime Video</p>
                   <p className="link">Amazon Busness</p>
                   <p className="link">Today's Deal</p>
-                  <p className="hidden lg:inline-flex">Eletronics</p>
+                  <p className="link hidden lg:inline-flex">Eletronics</p>
                   <p className="link hidden lg:inline-flex">Food & Grocery</p>
                   <p className="link hidden lg:inline-flex">Prime</p>
                   <p className="link hidden lg:inline-flex">Buy Again</p>
