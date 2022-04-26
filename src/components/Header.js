@@ -29,7 +29,7 @@ import {MenuIcon ,SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
               <div className='text-white flex items-center text-sm space-x-6 mx-6 whitespace-nowrap'>
                   
                   <div className='link'>
-                      <p>hello Tati Fernandes</p>
+                      <p>Hello Tati Fernandes</p>
                       <p className='font-extrabold md:text-sm'>Account & Lists</p>
                   </div>
               
