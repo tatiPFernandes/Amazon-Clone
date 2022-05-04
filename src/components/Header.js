@@ -56,7 +56,7 @@ import{ signIn, signOut, useSession } from "next-auth/client"
                       All
                   </p>
                   <p className="link">Prime Video</p>
-                  <p className="link">Amazon Busness</p>
+                  <p className="link">Amazon Business</p>
                   <p className="link">Today's Deal</p>
                   <p className="link hidden lg:inline-flex">Eletronics</p>
                   <p className="link hidden lg:inline-flex">Food & Grocery</p>
