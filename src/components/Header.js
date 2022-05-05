@@ -2,8 +2,13 @@ import React from "react";
 import Image from "next/image"
 import {MenuIcon ,SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
 import{ signIn, signOut, useSession } from "next-auth/react"
+import { useRouter } from "next/router";
 
  const Header =()=>{
+     const {data: session, status}= useSession();
+     const router = useRouter();
+     
+     
     return (
         <header>
             {/* top nav */}
@@ -29,8 +34,10 @@ import{ signIn, signOut, useSession } from "next-auth/react"
   
               <div className='text-white flex items-center text-sm space-x-6 mx-6 whitespace-nowrap'>
                   
-                  <div onClick={signIn} className='cursor-pointer link'>
-                      <p>Hello, Tati Fernandes</p>
+                  <div onClick={!session ? signIn : signOut} className='cursor-pointer link'>
+                      <p className="hover:underline">
+                          {session ? `Hello, ${session.user.name}`: 'Sing In'}
+                    </p>
                       <p className='font-extrabold md:text-sm'>Account & Lists</p>
                   </div>
               
@@ -65,12 +72,10 @@ import{ signIn, signOut, useSession } from "next-auth/react"
                   <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
                   <p className="link hidden lg:inline-flex">Health & Personal Care</p>
   
-              </div>           
-            
+              </div>        
+             
        
-       
-  
-        </header>
+    </header>
      
     )
   }
