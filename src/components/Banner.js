@@ -14,8 +14,12 @@
          interval={5000}
          >
            <div>
-              <img loading='lazy' src='https://links.papareact.com/gi1'alt=''/>
+              <img loading='lazy' src="https://m.media-amazon.com/images/I/61X+ZABKbrL._SX3000_.jpg" alt=''/>
 
+           </div>
+
+           <div>
+               <img loading='lazy' src="https://m.media-amazon.com/images/I/71dNidkGRxL._SX3000_.jpg" alt='Prime Video - ten percente seaseon 1'/>                
            </div>
                            
            <div>

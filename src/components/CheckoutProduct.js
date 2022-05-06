@@ -58,7 +58,7 @@ const CheckoutProduct =({
             <Currency quantity={price} currency="GBP"/>
 
             {hasPrime && (
-                <div className="flex items-center space-x-2" >
+                <div className="flex items-center space-x-3" >
                     <img 
                     loading="lazy"
                     className="w-12" 
