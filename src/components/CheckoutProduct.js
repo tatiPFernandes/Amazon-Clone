@@ -44,7 +44,7 @@ const CheckoutProduct =({
 
             {/* Middle Section*/}
 
-            <div className="col-span-3 max-5"  >
+            <div className="col-span-3 max-5">
                 <p>{title}</p>                
           
 
@@ -54,7 +54,7 @@ const CheckoutProduct =({
                 ))}
             </div>
 
-            <p className="text-xs my-2 line-clamp-3" >{description}</p>
+            <p className="text-xs my-2 line-clamp-3">{description}</p>
             <Currency quantity={price} currency="GBP"/>
 
             {hasPrime && (
