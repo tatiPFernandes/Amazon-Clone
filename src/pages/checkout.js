@@ -1,10 +1,15 @@
 import Header from "../components/Header";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+import { selectItems, selectTotal } from "../slices/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
+import Currency from "react-currency-formatter"
+import { useSession } from "next-auth/react";
 const Checkout = ()=>{
+    // selectItems and selectTotal allows us to pull info from the Redux global store (baskectSlice.js)
     const items = useSelector(selectItems)
+    const total = useSelector(selectTotal)
+    const {data: session, status}  = useSession();
     return(
         <div className="bg-gray-100">
             <Header/>
@@ -46,6 +51,24 @@ const Checkout = ()=>{
 
             {/* Right */}
 
+            <div className="flex flex-col bg-white p-10 shadow-md" >
+            {items.length > 0 &&(
+                <>
+                    <h2 className="whitespace-nowrap">Subtotal ({items.length} items): {' '} 
+                    
+                    <span className="font-bold" >
+                        <Currency quantity ={total} currency = "GBP" />
+                    </span>
+                </h2>
+                
+                <button disabled={!session} className={`button mt-2 ${!session && "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"}`}>
+                    {!session ? 'Sign in to cheackout' : 'Proceed to checkout'}
+                </button>
+
+                </>
+
+            )}
+        </div>
             </main>
            
         </div>

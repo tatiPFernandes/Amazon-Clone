@@ -1,4 +1,4 @@
-import { StarIcon } from "@heroicons/react/outline";
+import { StarIcon } from "@heroicons/react/solid";
 import Currency from"react-currency-formatter"
 import Image from "next/image";
 import { useDispatch } from "react-redux";
@@ -44,12 +44,12 @@ const CheckoutProduct =({
 
             {/* Middle Section*/}
 
-            <div className="col-span-3 max-5">
+            <div className="col-span-3 p-3 max-5">
                 <p>{title}</p>                
           
 
             <div className="flex">
-                {Array(rating).fill().map((_,i)=>(
+                {Array(rating).fill().map(i =>(
                     <StarIcon key={i} className="h-5 text-yellow-500"/>
                 ))}
             </div>
